@@ -8,6 +8,18 @@ Bank_account = 0
 ## Turtle Game Setup
 def turtle_stuff():
 
+    turtle.screensize(canvwidth=500, canvheight=500)
+
+    class turtle_details():
+
+        def __init__(self, color):
+            self.color = color
+            self.turt = turtle.Pen()
+            self.turt.color(color)
+            self.turt.shape('turtle')
+
+
+
 
 
 
