@@ -53,19 +53,6 @@ def turtle_stuff():
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 def enter_input():
     global turtle_bet
     global bet_amount
