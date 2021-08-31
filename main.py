@@ -5,18 +5,51 @@ import random
 Bank_account = 0
 
 
+class turtle_s:
+
+    def __init__(self, color):
+        self.color = color
+        self.turt = turtle.Pen()
+        self.turt.shape('turtle')
+        self.turt.color(color)
+
+
+red_turtle = turtle_s('red')
+blue_turtle = turtle_s('blue')
+yellow_turtle = turtle_s('yellow')
+
+turtle_list = [red_turtle, blue_turtle, yellow_turtle]
+
+
 ## Turtle Game Setup
 def turtle_stuff():
 
     turtle.screensize(canvwidth=500, canvheight=500)
+    turtle.bgcolor('black')
 
-    class turtle_details():
+    for color_turtle in turtle_list:
 
-        def __init__(self, color):
-            self.color = color
-            self.turt = turtle.Pen()
-            self.turt.color(color)
-            self.turt.shape('turtle')
+        if turtle_list.index(color_turtle) % 3 == 0:
+
+            color_turtle.turt.penup()
+            color_turtle.turt.setpos(-300, -250)
+            color_turtle.turt.left(90)
+
+        elif turtle_list.index(color_turtle) % 3 == 1:
+
+            color_turtle.turt.penup()
+            color_turtle.turt.setpos(300, -250)
+            color_turtle.turt.left(90)
+
+        else:
+
+            color_turtle.turt.penup()
+            color_turtle.turt.setpos(0, -250)
+            color_turtle.turt.left(90)
+
+
+
+
 
 
 
