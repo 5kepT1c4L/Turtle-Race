@@ -1,5 +1,6 @@
 import turtle
 from tkinter import *
+import time
 import random
 
 Bank_account = 0
@@ -48,8 +49,108 @@ def turtle_stuff():
             color_turtle.turt.left(90)
 
 
+    def turtle_move():
+
+        for color_turtle in turtle_list:
+
+            color_turtle.turt.speed(random.randrange(1, 5))
+
+            if color_turtle == red_turtle:
+
+                start = time.time()
+
+                color_turtle.turt.goto(-300, 250)
+
+                end = time.time()
+
+                red_time_dif = start - end
+
+                print("Red Turtle: {}".format(round((red_time_dif, 5))))
+
+            elif color_turtle == blue_turtle:
+
+                start = time.time()
+
+                color_turtle.turt.goto(300, 250)
+
+                end = time.time()
+
+                blue_time_dif = end - start
+
+                print("Blue Turtle: {}".format(round(blue_time_dif, 5)))
 
 
+            else:
+
+                start = time.time()
+
+                color_turtle.turt.goto(0, 250)
+
+                end = time.time()
+
+                yellow_time_dif = end - start
+
+                print("Yellow Turtle: {}".format(round(yellow_time_dif, 5)))
+
+
+        def result():
+
+            if red_time_dif > blue_time_dif and yellow_time_dif:
+
+                if user_turtle_bet.lower() == "red":
+
+                    print("Red turtle wins!\nYou win {} coins!".format(user_bet_amount))
+                    Bank_account += user_bet_amount
+
+                else:
+
+                    print("Red turtle wins!\nYou lost {} coins!".format(user_bet_amount))
+                    Bank_account -= user_bet_amount
+
+            if blue_time_dif > red_time_dif and yellow_time_dif:
+
+                if user_turtle_bet.lower() == "blue":
+
+                    print("Blue turtle wins!\nYou win {} coins!".format(user_bet_amount))
+                    Bank_account += user_bet_amount
+
+                else:
+
+                    print("Blue turtle wins!\nYou lost {} coins!".format(user_bet_amount))
+                    Bank_account -= user_bet_amount
+
+            if yellow_time_dif > red_time_dif and blue_time_dif:
+
+                if user_turtle_bet.lower() == "yellow":
+
+                    print("Yellow turtle wins!\nYou win {} coins!".format(user_bet_amount))
+                    Bank_account += user_bet_amount
+
+                else:
+
+                    print("Yellow turtle wins!\nYou lost {} coins!".format(user_bet_amount))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    turtle_move()
 
 
 
@@ -60,7 +161,7 @@ def enter_input():
     turtle_bet = user_turtle_bet.get()
     bet_amount = user_bet_amount.get()
     turtle_stuff() # trigger the turtle code
-    return turtle_bet, bet_amount
+
 
 
 ## Tkinter Entry Setup
@@ -84,6 +185,8 @@ user_amount_entry.grid(row=1, column=1)
 enter_button.grid(row=2, column=1)
 
 tk.mainloop()
+
+
 
 
 
