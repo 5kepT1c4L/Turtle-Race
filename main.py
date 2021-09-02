@@ -63,9 +63,9 @@ def turtle_stuff():
 
                 end = time.time()
 
-                red_time_dif = start - end
+                red_time_dif = end - start
 
-                print("Red Turtle: {}".format(round((red_time_dif, 5))))
+                print("Red Turtle: {}".format(round(red_time_dif, 5)))
 
             elif color_turtle == blue_turtle:
 
@@ -129,28 +129,9 @@ def turtle_stuff():
                 else:
 
                     print("Yellow turtle wins!\nYou lost {} coins!".format(user_bet_amount))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     turtle_move()
+
+
 
 
 
