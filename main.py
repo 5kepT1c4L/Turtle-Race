@@ -35,18 +35,21 @@ def turtle_stuff():
         if turtle_list.index(color_turtle) % 3 == 0:
 
             color_turtle.turt.penup()
+            color_turtle.turt.speed(2)
             color_turtle.turt.setpos(-300, -250)
             color_turtle.turt.left(90)
 
         elif turtle_list.index(color_turtle) % 3 == 1:
 
             color_turtle.turt.penup()
+            color_turtle.turt.speed(2)
             color_turtle.turt.setpos(300, -250)
             color_turtle.turt.left(90)
 
         else:
 
             color_turtle.turt.penup()
+            color_turtle.turt.speed(2)
             color_turtle.turt.setpos(0, -250)
             color_turtle.turt.left(90)
 
