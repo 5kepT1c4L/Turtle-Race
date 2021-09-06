@@ -108,46 +108,48 @@ def turtle_stuff():
         global bet_amount
 
 
-        if red_time_dif < blue_time_dif and yellow_time_dif:
+        if red_time_dif < blue_time_dif and red_time_dif < yellow_time_dif:
 
             if turtle_bet.lower() == "red":
 
                 Bank_account += int(bet_amount)
                 print("Red turtle wins!\nYou win {} coins! You now have {} coins in total!".format(str(bet_amount), Bank_account))
+                print("\n<--------------------------------------------------->\n")
 
 
             else:
 
                 Bank_account -= int(bet_amount)
                 print("Red turtle wins!\nYou lost {} coins! You now have {} coins in total!".format(str(bet_amount), Bank_account))
+                print("\n<--------------------------------------------------->\n")
 
-
-        if blue_time_dif < red_time_dif and yellow_time_dif:
+        if blue_time_dif < red_time_dif and blue_time_dif < yellow_time_dif:
 
             if turtle_bet.lower() == "blue":
 
                 Bank_account += int(bet_amount)
                 print("Blue turtle wins!\nYou win {} coins! You now have {} coins in total!".format(str(bet_amount), Bank_account))
-
+                print("\n<--------------------------------------------------->\n")
 
             else:
 
                 Bank_account -= int(bet_amount)
                 print("Blue turtle wins!\nYou lost {} coins! You now have {} coins in total!".format(str(bet_amount), Bank_account))
+                print("\n<--------------------------------------------------->\n")
 
-
-        if yellow_time_dif < red_time_dif and blue_time_dif:
+        if yellow_time_dif < red_time_dif and yellow_time_dif < blue_time_dif:
 
             if turtle_bet.lower() == "yellow":
 
                 Bank_account += int(bet_amount)
                 print("Yellow turtle wins!\nYou win {} coins! You now have {} coins in total".format(str(bet_amount), Bank_account))
-
+                print("\n<--------------------------------------------------->\n")
 
             else:
 
                 Bank_account -= int(bet_amount)
                 print("Yellow turtle wins!\nYou lost {} coins! You now have {} coins in total".format(str(bet_amount), Bank_account))
+                print("\n<--------------------------------------------------->\n")
 
     turtle_move()
 
